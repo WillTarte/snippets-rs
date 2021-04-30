@@ -1,0 +1,19 @@
+[package]
+name = "snips-backend"
+version = "0.1.0"
+authors = ["WillTarte <William.tarte6@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+snips-lib = { path = "../snips-lib" }
+dotenv = "*"
+env_logger = "*"
+log = "*"
+serde = "*"
+serde_json = "*"
+anyhow = "*"
+uuid = { version ="0.8.2", features = ["serde"] }
+actix-web = "3"
+sqlx = { version = "0.5", features = ["postgres", "macros", "chrono", "uuid", "migrate", "json", "runtime-actix-native-tls"] }
